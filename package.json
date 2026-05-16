@@ -13,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:Jaid/flatten-string.git"
+    "url": "git+https://github.com/Jaid/flatten-string.git"
   },
   "scripts": {
     "test": "bun test --max-concurrency 1"
