@@ -1,6 +1,8 @@
 import {defineConfig} from 'tsdown'
 
-import {createEmitDistributionFilesPlugin, createMinifyJavaScriptPlugin, createMinifyTypeDeclarationsPlugin} from './lib/rolldown.ts'
+import {createEmitDistributionFilesPlugin} from './lib/createEmitDistributionFilesPlugin.ts'
+import {createMinifyJavaScriptPlugin} from './lib/createMinifyJavaScriptPlugin.ts'
+import {createMinifyTypeDeclarationsPlugin} from './lib/createMinifyTypeDeclarationsPlugin.ts'
 
 export default defineConfig({
   clean: true,

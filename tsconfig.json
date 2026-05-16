@@ -1,9 +1,3 @@
 {
-  "extends": "./node_modules/tsconfig-jaid-bun/base.json",
-  "include": [
-    "build/**/*.ts",
-    "src/**/*.ts",
-    "test/**/*.ts",
-    "tsdown.config.ts"
-  ]
+  "extends": "./node_modules/tsconfig-jaid-bun/base.json"
 }

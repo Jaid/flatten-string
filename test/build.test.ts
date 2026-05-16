@@ -1,6 +1,7 @@
 import {expect, test} from 'bun:test'
 
-import {minifyTypeDeclarations, toDistributionPackageJson} from '#root/build/lib/rolldown.ts'
+import {toDistributionPackageJson} from '#root/lib/createEmitDistributionFilesPlugin.ts'
+import {minifyTypeDeclarations} from '#root/lib/createMinifyTypeDeclarationsPlugin.ts'
 
 test('minifies type declarations without changing literal contents', () => {
   const declarationFile = `
