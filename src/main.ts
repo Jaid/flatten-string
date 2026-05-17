@@ -53,7 +53,7 @@ flattenString.comma = (...items: Array<unknown>): string => {
 flattenString.list = (...items: Array<unknown>): string => {
   return flattenStringWith(', ', items)
 }
-flattenString.zero = (...items: Array<unknown>): string => {
+flattenString.null = (...items: Array<unknown>): string => {
   return flattenStringWith('\0', items)
 }
 flattenString.tab = (...items: Array<unknown>): string => {
