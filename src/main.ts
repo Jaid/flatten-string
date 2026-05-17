@@ -59,4 +59,10 @@ flattenString.null = (...items: Array<unknown>): string => {
 flattenString.tab = (...items: Array<unknown>): string => {
   return flattenStringWith('\t', items)
 }
+flattenString.slash = (...items: Array<unknown>): string => {
+  return flattenStringWith('/', items)
+}
+flattenString.underscore = (...items: Array<unknown>): string => {
+  return flattenStringWith('_', items)
+}
 export default flattenString
