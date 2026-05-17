@@ -1,7 +1,7 @@
 import isIterable from '#src/lib/isIterable.ts'
 import isZeroLength from '#src/lib/isZeroLength.ts'
 
-const concatenateStringsWith = (joiner: string, ...items: Array<unknown>): string => {
+const flattenStringWith = (joiner: string, ...items: Array<unknown>): string => {
   let result = ''
   const processItem = (item: unknown) => {
     if (!item) {
@@ -31,32 +31,32 @@ const concatenateStringsWith = (joiner: string, ...items: Array<unknown>): strin
   }
   return result
 }
-const concatenateStrings = (...items: Array<unknown>): string => {
-  return concatenateStringsWith('', items)
+const flattenString = (...items: Array<unknown>): string => {
+  return flattenStringWith('', items)
 }
-concatenateStrings.with = concatenateStringsWith
-concatenateStrings.lines = (...items: Array<unknown>): string => {
-  return concatenateStringsWith('\n', items)
+flattenString.with = flattenStringWith
+flattenString.lines = (...items: Array<unknown>): string => {
+  return flattenStringWith('\n', items)
 }
-concatenateStrings.paragraphs = (...items: Array<unknown>): string => {
-  return concatenateStringsWith('\n\n', items)
+flattenString.paragraphs = (...items: Array<unknown>): string => {
+  return flattenStringWith('\n\n', items)
 }
-concatenateStrings.spaced = (...items: Array<unknown>): string => {
-  return concatenateStringsWith(' ', items)
+flattenString.spaced = (...items: Array<unknown>): string => {
+  return flattenStringWith(' ', items)
 }
-concatenateStrings.colon = (...items: Array<unknown>): string => {
-  return concatenateStringsWith(':', items)
+flattenString.colon = (...items: Array<unknown>): string => {
+  return flattenStringWith(':', items)
 }
-concatenateStrings.comma = (...items: Array<unknown>): string => {
-  return concatenateStringsWith(',', items)
+flattenString.comma = (...items: Array<unknown>): string => {
+  return flattenStringWith(',', items)
 }
-concatenateStrings.list = (...items: Array<unknown>): string => {
-  return concatenateStringsWith(', ', items)
+flattenString.list = (...items: Array<unknown>): string => {
+  return flattenStringWith(', ', items)
 }
-concatenateStrings.zero = (...items: Array<unknown>): string => {
-  return concatenateStringsWith('\0', items)
+flattenString.zero = (...items: Array<unknown>): string => {
+  return flattenStringWith('\0', items)
 }
-concatenateStrings.tab = (...items: Array<unknown>): string => {
-  return concatenateStringsWith('\t', items)
+flattenString.tab = (...items: Array<unknown>): string => {
+  return flattenStringWith('\t', items)
 }
-export default concatenateStrings
+export default flattenString
