@@ -24,6 +24,6 @@ test('exposes the built-in joiner helpers', () => {
   expect(flattenString.colon('alpha', 'beta')).toBe('alpha:beta')
   expect(flattenString.comma('alpha', 'beta')).toBe('alpha,beta')
   expect(flattenString.list('alpha', 'beta')).toBe('alpha, beta')
-  expect(flattenString.zero('alpha', 'beta')).toBe('alpha\0beta')
+  expect(flattenString.null('alpha', 'beta')).toBe('alpha\0beta')
   expect(flattenString.tab('alpha', 'beta')).toBe('alpha\tbeta')
 })
