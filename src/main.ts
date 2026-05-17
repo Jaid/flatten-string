@@ -1,7 +1,7 @@
 import isIterable from '#src/lib/isIterable.ts'
 import isZeroLength from '#src/lib/isZeroLength.ts'
 
-const flattenStringWith = (joiner: string, ...items: Array<unknown>): string => {
+const flattenStringWith = (joiner: string, ...items: Array<unknown>) => {
   let result = ''
   const processItem = (item: unknown) => {
     if (!item) {
@@ -31,38 +31,38 @@ const flattenStringWith = (joiner: string, ...items: Array<unknown>): string => 
   }
   return result
 }
-const flattenString = (...items: Array<unknown>): string => {
+const flattenString = (...items: Array<unknown>) => {
   return flattenStringWith('', items)
 }
 flattenString.with = flattenStringWith
-flattenString.lines = (...items: Array<unknown>): string => {
+flattenString.lines = (...items: Array<unknown>) => {
   return flattenStringWith('\n', items)
 }
-flattenString.paragraphs = (...items: Array<unknown>): string => {
+flattenString.paragraphs = (...items: Array<unknown>) => {
   return flattenStringWith('\n\n', items)
 }
-flattenString.spaced = (...items: Array<unknown>): string => {
+flattenString.spaced = (...items: Array<unknown>) => {
   return flattenStringWith(' ', items)
 }
-flattenString.colon = (...items: Array<unknown>): string => {
+flattenString.colon = (...items: Array<unknown>) => {
   return flattenStringWith(':', items)
 }
-flattenString.comma = (...items: Array<unknown>): string => {
+flattenString.comma = (...items: Array<unknown>) => {
   return flattenStringWith(',', items)
 }
-flattenString.list = (...items: Array<unknown>): string => {
+flattenString.list = (...items: Array<unknown>) => {
   return flattenStringWith(', ', items)
 }
-flattenString.null = (...items: Array<unknown>): string => {
+flattenString.null = (...items: Array<unknown>) => {
   return flattenStringWith('\0', items)
 }
-flattenString.tab = (...items: Array<unknown>): string => {
+flattenString.tab = (...items: Array<unknown>) => {
   return flattenStringWith('\t', items)
 }
-flattenString.slash = (...items: Array<unknown>): string => {
+flattenString.slash = (...items: Array<unknown>) => {
   return flattenStringWith('/', items)
 }
-flattenString.underscore = (...items: Array<unknown>): string => {
+flattenString.underscore = (...items: Array<unknown>) => {
   return flattenStringWith('_', items)
 }
 export default flattenString
